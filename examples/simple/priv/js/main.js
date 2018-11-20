@@ -10,7 +10,7 @@ var password = 'password';
 var localVideo = document.querySelector('#localVideo');
 var remoteVideo = document.querySelector('#remoteVideo');
 
-const stunUrl = 'stun:' + window.location.hostname + ':3478';
+const stunUrl = 'stun:stun.services.mozilla.com';
 const turnUrl = 'turn:' + window.location.hostname + ':3478';
 var pcConfig = {
   iceServers: [{
