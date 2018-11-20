@@ -10,11 +10,16 @@ var password = 'password';
 var localVideo = document.querySelector('#localVideo');
 var remoteVideo = document.querySelector('#remoteVideo');
 
-const stunUrl = 'stun:stun.services.mozilla.com';
+const stunUrl = 'stun:' + window.location.hostname + ':3478';
 const turnUrl = 'turn:' + window.location.hostname + ':3478';
 var pcConfig = {
-  iceServers: [{urls: "stun:stun.services.mozilla.com"},
-               {urls: "stun:stun.l.google.com:19302"}]
+  iceServers: [{
+    urls: turnUrl,
+    username: username,
+    credential: password
+  },{
+    urls: stunUrl
+  }]
 };
 
 /**
