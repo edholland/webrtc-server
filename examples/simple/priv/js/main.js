@@ -32,7 +32,7 @@ getStream()
 function getStream() {
   return navigator.mediaDevices
     .getUserMedia({
-      audio: true,
+      audio: false,
       video: true
     })
     .then(function (stream) {
@@ -81,11 +81,13 @@ function joined(data) {
 }
 
 function candidate(data) {
+  console.log('candidate', data)
   var candidate = new RTCIceCandidate({
     sdpMLineIndex: data.label,
     candidate: data.candidate
   });
   pc.addIceCandidate(candidate);
+  console.log("Added candidate")
 }
 
 function offer (data, fromPeer) {
