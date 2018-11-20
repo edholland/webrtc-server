@@ -13,9 +13,8 @@ var remoteVideo = document.querySelector('#remoteVideo');
 const stunUrl = 'stun:stun.services.mozilla.com';
 const turnUrl = 'turn:' + window.location.hostname + ':3478';
 var pcConfig = {
-  iceServers: [{
-    urls: stunUrl
-  }]
+  iceServers: [{urls: "stun:stun.services.mozilla.com"},
+               {urls: "stun:stun.l.google.com:19302"}]
 };
 
 /**
