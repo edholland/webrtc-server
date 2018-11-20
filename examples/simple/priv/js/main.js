@@ -14,10 +14,6 @@ const stunUrl = 'stun:stun.services.mozilla.com';
 const turnUrl = 'turn:' + window.location.hostname + ':3478';
 var pcConfig = {
   iceServers: [{
-    urls: turnUrl,
-    username: username,
-    credential: password
-  },{
     urls: stunUrl
   }]
 };
