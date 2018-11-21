@@ -11,7 +11,7 @@ var localVideo = document.querySelector('#localVideo');
 var remoteVideo = document.querySelector('#remoteVideo');
 
 const stunUrl = 'stun:' + window.location.hostname + ':3478';
-const turnUrl = 'turn:' + '34.254.254.228' + ':3478';
+const turnUrl = 'turn:' + window.location.hostname + ':3478';
 var pcConfig = {
   iceServers: [{
     urls: turnUrl,
