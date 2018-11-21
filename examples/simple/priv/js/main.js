@@ -17,9 +17,11 @@ var pcConfig = {
     urls: turnUrl,
     username: username,
     credential: password
-  },{
-    urls: stunUrl
-  }]
+  },
+               // {
+//    urls: stunUrl
+ // }
+              ]
 };
 
 /**
